@@ -4,89 +4,104 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Doraemon Theme Color Palette */
+    --dora-blue: 199.3 100% 46.3%; /* #00A0E8 */
+    --dora-red: 354.9 100% 45.1%; /* #E60012 */
+    --dora-yellow: 50.1 100% 50%; /* #FFD700 */
+    --dora-white: 0 0% 100%; /* #FFFFFF */
+    --dora-light-gray: 0 0% 94.1%; /* #F0F0F0 */
+    --dora-medium-gray: 0 0% 20%; /* #333333 */
+    --dora-dark-gray: 0 0% 10.2%; /* #1A1A1A (near black for high contrast text) */
+    --dora-primary-blue-darker: 200.3 100% 35.5%; /* #007AB5 (for primary bg with white text) */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Light Mode Semantic Colors */
+    --background: var(--dora-white);
+    --foreground: var(--dora-medium-gray);
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: var(--dora-white);
+    --card-foreground: var(--dora-medium-gray);
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: var(--dora-white);
+    --popover-foreground: var(--dora-medium-gray);
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: var(--dora-primary-blue-darker);
+    --primary-foreground: var(--dora-white);
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: var(--dora-light-gray);
+    --secondary-foreground: var(--dora-medium-gray);
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: var(--dora-light-gray);
+    --muted-foreground: 0 0% 40%; /* Lighter gray for muted text */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: var(--dora-yellow);
+    --accent-foreground: var(--dora-dark-gray);
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --destructive: var(--dora-red);
+    --destructive-foreground: var(--dora-white);
 
-    --radius: 0.5rem;
+    --border: var(--dora-light-gray);
+    --input: var(--dora-light-gray);
+    --ring: var(--dora-blue); /* Doraemon Blue for focus indicator */
 
-    --sidebar-background: 0 0% 98%;
+    --radius: 0.625rem; /* 10px */
+    --font-sans: "Nunito", "Helvetica Neue", Arial, sans-serif;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar Light Mode Colors */
+    --sidebar-background: var(--dora-white);
+    --sidebar-foreground: var(--dora-medium-gray);
+    --sidebar-primary: var(--dora-primary-blue-darker);
+    --sidebar-primary-foreground: var(--dora-white);
+    --sidebar-accent: var(--dora-yellow);
+    --sidebar-accent-foreground: var(--dora-dark-gray);
+    --sidebar-border: var(--dora-light-gray);
+    --sidebar-ring: var(--dora-blue);
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Doraemon Dark Theme Specifics */
+    --dora-dark-bg: 220 10% 10%; /* Very dark, slightly bluish gray */
+    --dora-dark-card-bg: 220 10% 15%;
+    --dora-dark-border: 220 10% 25%;
+    --dora-dark-muted-fg: 0 0% 60%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    /* Dark Mode Semantic Colors */
+    --background: var(--dora-dark-bg);
+    --foreground: var(--dora-light-gray);
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --card: var(--dora-dark-card-bg);
+    --card-foreground: var(--dora-light-gray);
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --popover: var(--dora-dark-card-bg);
+    --popover-foreground: var(--dora-light-gray);
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --primary: var(--dora-blue); /* Bright Doraemon Blue */
+    --primary-foreground: var(--dora-dark-gray); /* Dark text for contrast */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --secondary: 220 10% 20%;
+    --secondary-foreground: var(--dora-light-gray);
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --muted: 220 10% 18%;
+    --muted-foreground: var(--dora-dark-muted-fg);
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --accent: var(--dora-yellow);
+    --accent-foreground: var(--dora-dark-gray);
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --destructive: var(--dora-red);
+    --destructive-foreground: var(--dora-white);
+
+    --border: var(--dora-dark-border);
+    --input: var(--dora-dark-border);
+    --ring: var(--dora-blue); /* Ring remains bright Doraemon Blue */
+
+    /* Sidebar Dark Mode Colors */
+    --sidebar-background: var(--dora-dark-bg);
+    --sidebar-foreground: var(--dora-light-gray);
+    --sidebar-primary: var(--dora-blue);
+    --sidebar-primary-foreground: var(--dora-dark-gray);
+    --sidebar-accent: var(--dora-yellow);
+    --sidebar-accent-foreground: var(--dora-dark-gray);
+    --sidebar-border: var(--dora-dark-border);
+    --sidebar-ring: var(--dora-blue);
   }
 }
 
@@ -96,6 +111,6 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans; /* Apply the default font */
   }
 }
